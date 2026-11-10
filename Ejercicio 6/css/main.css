@@ -46,7 +46,14 @@ h1 {
     padding: 3rem;
 }
 
-/* Posición de los elementos */
+.sub-item {
+    background-color: var(--second-color);
+    padding: 1rem;
+}
+
+/* =========================
+   4. POSICIONAMIENTO
+========================= */
 
 .item-1 {
     grid-column: 1 / 4;
@@ -62,16 +69,8 @@ h1 {
 
 .item-4 {
     grid-column: 3;
-    align-self: end;
 }
 
 .item-5 {
     grid-column: 1 / 4;
-}
-
-/* Sub-items */
-
-.sub-item {
-    background-color: var(--second-color);
-    padding: 1rem;
 }
