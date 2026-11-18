@@ -1,0 +1,309 @@
+
+/* COLORES PRINCIPALES */
+
+:root {
+    --blue: #168bd2;
+    --dark-blue: #101d2b;
+    --cyan: #75e6f4;
+    --green: #9acb55;
+    --purple: #7657c8;
+    --orange: #ff7043;
+    --white: #f4f8fb;
+}
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    background-color: var(--dark-blue);
+
+    /* IMAGEN DE FONDO */
+    background-image:
+        linear-gradient(
+            rgba(5, 15, 25, 0.65),
+            rgba(5, 15, 25, 0.85)
+        ),
+        url("../img/halo-5-guardians-reseña-portada-1.webp");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* CABECERA */
+
+.header {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        120deg,
+        #10283d,
+        #168bd2,
+        #7657c8
+    );
+
+    border: 2px solid var(--cyan);
+    border-radius: 18px;
+
+    box-shadow: 0 0 25px rgba(22, 139, 210, 0.5);
+}
+
+/* LOGO */
+
+.logo {
+    width: 220px;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+/* TÍTULO */
+
+h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px black;
+}
+
+.header-text {
+    color: #e0faff;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* CONTENIDO */
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* FORMULARIO */
+
+form {
+    width: 100%;
+    max-width: 780px;
+
+    padding: 35px;
+
+    background-color: rgba(13, 29, 43, 0.97);
+
+    border: 2px solid var(--blue);
+    border-radius: 18px;
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+/* TÍTULO DEL FORMULARIO */
+
+h2 {
+    text-align: center;
+    color: var(--cyan);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.intro {
+    text-align: center;
+    color: #c6dce8;
+    margin-bottom: 25px;
+}
+
+/* GRUPOS */
+
+fieldset {
+    border: 1px solid var(--blue);
+    border-radius: 12px;
+
+    padding: 20px;
+    margin-bottom: 25px;
+
+    background-color: #1b3448;
+}
+
+legend {
+    color: var(--green);
+    font-weight: bold;
+    padding: 8px 12px;
+    letter-spacing: 1px;
+}
+
+/* CAMPOS */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+/* INPUTS */
+
+input,
+textarea,
+select {
+    border: 1px solid #71899a;
+    border-radius: 7px;
+
+    background-color: #0c1925;
+    color: white;
+}
+
+input:not([type="radio"], [type="checkbox"]),
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+/* PLACEHOLDER */
+
+input::placeholder,
+textarea::placeholder {
+    color: #9aabb9;
+}
+
+/* FOCUS */
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border: 2px solid var(--cyan);
+    box-shadow: 0 0 10px var(--cyan);
+}
+
+/* RADIO Y CHECKBOX */
+
+.inline {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.inline input {
+    accent-color: var(--green);
+}
+
+/* ENLACES */
+
+a {
+    color: var(--cyan);
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--green);
+}
+
+/* ASTERISCO OBLIGATORIO */
+
+.is-required::after {
+    content: " *";
+    color: var(--orange);
+    font-weight: bold;
+}
+
+/* BOTONES */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    flex: 1;
+    min-height: 50px;
+    padding: 12px;
+
+    border: 2px solid var(--cyan);
+    border-radius: 9px;
+
+    background-color: var(--blue);
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-reset {
+    background-color: var(--purple);
+}
+
+.btn:hover {
+    background-color: var(--green);
+    color: #101923;
+    transform: translateY(-3px);
+}
+
+/* MENSAJE FINAL */
+
+.note {
+    margin-top: 25px;
+    text-align: center;
+    color: var(--orange);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--cyan);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .header {
+        width: 95%;
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .inline {
+        margin-right: 8px;
+    }
+}
